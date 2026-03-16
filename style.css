@@ -118,3 +118,29 @@ h1{
     font-weight: bold;
     margin-bottom: 16px;
 }
+
+.section-title{
+    height: 50px;
+    background-color: #E76C1F;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+    padding-left: 32px;
+    p{
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+.section-logo{
+    height: 40px;
+}
+
+.dishes-base{
+    width: 720px;
+    height: 160px;
+    border-radius: 16px;
+    background-color: #FDEADC;
+}
