@@ -5,10 +5,14 @@ body{
 
 header{
     width: 100%;
+    height: 508px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
+    background-image: url(./assets/img/hero.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
 }
 
 nav{
@@ -18,6 +22,8 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
     filter: drop-shadow( 0 5px 5px rgba(81, 18, 0, 0.163));
 }
 
