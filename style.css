@@ -27,6 +27,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-inline: 40px;
 }
 
 .header-icon{
@@ -39,9 +40,69 @@ nav{
     object-fit: cover;
 }
 
+.header-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
 .page-title{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    gap: 16px;
+}
+
+h1{
+    margin: 0;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.color-a{
+    color: #E76C1F;
+    margin: 0;
+}
+
+.color-b{
+    color: black;
+    margin: 0;
+}
+
+.ratings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FACAAC;
+    padding: 5px 4px;
+    gap: 8px;
+    p{
+        font-size: 24px;
+        margin: 0;
+    }
+}
+
+.ratings-icon{
+    height: 24px;
+}
+
+.rating-votes{
+    color: rgb(86, 86, 86);
+}
+
+.title-sub-text{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
 }
