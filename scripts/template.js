@@ -4,7 +4,7 @@ function dishTemplate(category, dishIMG, dishName, dishPrice, dishDescription, i
     document.getElementById(locationID).innerHTML += `
         <article class="dish-container" id="dish-container-a">
             <section class="dishes-base">
-                <img id="dish-img-" src="${dishIMG}" alt="">
+                <img class="image-size" id="dish-img-" src="${dishIMG}" alt="">
                 <div class="dish-info">
                     <h2 class="dishes-text-size" id="dish-name-">${dishName}</h2>
                     <span id="dish-description-">${dishDescription}</span>

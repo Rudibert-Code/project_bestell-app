@@ -199,3 +199,10 @@ h1{
     left: calc(100% - 435px);
     top: 0;
 }
+
+.image-size{
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 16px;
+}

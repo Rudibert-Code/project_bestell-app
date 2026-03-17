@@ -32,25 +32,25 @@ let myDishes = [
         "Category":"pizza",
         "Dish": [
             {
-                "Image": "./assets/img/pizza-1.png",
+                "Image": "./assets/img/pizza-1.jpg",
                 "Name":"Margherita",
                 "Price": 11.90,
                 "Details": "Tomato sauce, mozarella"
             },  
             {
-                "Image": "./assets/img/pizza-2.png",
+                "Image": "./assets/img/pizza-2.jpg",
                 "Name":"Chorio",
                 "Price": 13.50,
                 "Details": "Tomato slices, mozarella, chorizo"
             },
             {
-                "Image": "./assets/img/pizza-3.png",
+                "Image": "./assets/img/pizza-3.jpg",
                 "Name":"Fungi",
                 "Price": 12.99,
                 "Details": "Red onions, olives, button mushrooms, mozarella"
             },
             {
-                "Image": "./assets/img/pizza-4.png",
+                "Image": "./assets/img/pizza-4.jpg",
                 "Name":"Quatro fromaggi with chicken",
                 "Price": 15.50,
                 "Details": "Chicken, mozarella, gorgonzola, fontina, parmigiano reggiano"
@@ -61,25 +61,25 @@ let myDishes = [
         "Category":"salad",
         "Dish": [
             {
-                "Image": "./assets/img/salad-1.png",
+                "Image": "./assets/img/pizza-1.jpg",
                 "Name":"Warm beef arugula salad",
                 "Price": 16.90,
                 "Details": "Beef, arugula, field salad, greek feta, cherry tomatos, sun-dired tomatoes, balsamic-vinegar dressing"
             },  
             {
-                "Image": "./assets/img/salad-2.png",
+                "Image": "./assets/img/salad-2.jpg",
                 "Name":"Mini green salad",
                 "Price": 7.90,
                 "Details": "Green salad, cucumber, carrots, parsley, radish"
             },
             {
-                "Image": "./assets/img/salad-3.png",
+                "Image": "./assets/img/salad-3.jpg",
                 "Name":"Sea food salad",
                 "Price": 16.00,
                 "Details": "Mixed greens, cherry tomatoes, red onions, mussels, squid rings, shrimps, dijon mustardlemon dressing with dill"
             },
             {
-                "Image": "./assets/img/salad-4.png",
+                "Image": "./assets/img/salad-4.jpg",
                 "Name":"Vegan green salad with tofu",
                 "Price": 14.90,
                 "Details": "Green salad, cherry tomatoes, cucumber, baby spinach, edamame, radishes, bittercress, tofu, peanuts"
