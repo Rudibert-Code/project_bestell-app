@@ -180,6 +180,12 @@ h1{
     height: 794px;
     background-color: #363534;
     border-radius: 30px;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.position-sticky{
     position: sticky;
     top: 0;
 }
