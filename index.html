@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
     <script src="./scripts/dishes-list.js"></script>
+    <script src="./scripts/template.js"></script>
 </head>
-<body>
+<body onload="init()">
     <header>
         <nav>
             <section class="nav-container">
@@ -39,26 +40,11 @@
         </section>   
         <section class="main-container">
             <section class="dishes">
-
-
             <section class="food-section" id="burger-section">
                 <section class="section-title">
                     <img class="section-logo" src="./assets/logo/Chanese 1.png" alt="burger-icon">
                     <p>Burger & Sandwiches</p>
                 </section>
-                <article class="dish-container" id="dish-container-a">
-                    <section class="dishes-base">
-                            <img id="dish-img-" src="./assets/img/Rectangle 10.png" alt="">
-                            <div class="dish-info">
-                        <h2 class="dishes-text-size" id="dish-name-">Dish Name</h2>
-                        <span id="dish-description-">it's good</span>
-                            </div>
-                            <div class="dish-info">
-                        <p id="dish-price-">10,50€</p>
-                        <button id="add-dish-" onclick="addDish()">...</button>
-                            </div>
-                    </section>
-                </article>
             </section>
             <section class="food-section" id="pizza-section">
                 <section class="section-title">
@@ -72,7 +58,6 @@
                     <p>Salad</p>
                 </section>
             </section>
-
             </section>
             <section open class="sticky-wide-screen" id="sticky-wide-screen"></section>
         </section>
