@@ -175,17 +175,18 @@ h1{
     gap: 8px;
 }
 
+.main-container{
+    width: 100%;
+    display: flex;
+    align-items: start;
+}
+
 .sticky-wide-screen{
     width: 435px;
     height: 794px;
     background-color: #363534;
     border-radius: 30px;
-    position: fixed;
-    right: 0;
-    top: 0;
-}
-
-.position-sticky{
     position: sticky;
+    left: calc(100% - 435px);
     top: 0;
 }
