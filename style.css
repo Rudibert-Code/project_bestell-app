@@ -136,7 +136,7 @@ h1{
 }
 
 .section-logo{
-    height: 40px;
+    height: 64px;
 }
 
 .dish-container{
@@ -201,6 +201,7 @@ h2{
 span{
     font-size: 16px;
     margin: 0;
+    color: #363534;
 }
 
 .font-dish-price{
