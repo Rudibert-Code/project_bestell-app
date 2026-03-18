@@ -146,7 +146,6 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 16px;
     padding-inline: 40px;
 }
 
@@ -159,6 +158,8 @@ h1{
     justify-content: space-between;
     align-items: center;
     padding-inline: 20px;
+    margin-bottom: 16px;
+    gap: 16px;
 }
 
 .dishes-text-sice{
@@ -166,13 +167,45 @@ h1{
     font-weight: bold;
 }
 
-.dish-info{
+.dish-info-1{
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+}
+
+.dish-info-2{
+    width: 320px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 8px;
+    justify-content: start;
+    align-items: start;
+}
+
+.dish-info-3{
+    width: 320px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+}
+
+h2{
+    font-size: 24px;
+    margin: 16px 0;
+}
+
+span{
+    font-size: 16px;
+    margin: 0;
+}
+
+.font-dish-price{
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .main-container{
@@ -203,6 +236,11 @@ h1{
 .image-size{
     width: 200px;
     height: 120px;
+    border-radius: 8px;
+}
+
+.image-size img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 16px;
 }

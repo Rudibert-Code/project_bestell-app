@@ -22,7 +22,7 @@ let myDishes = [
             },
             {
                 "Image": "./assets/img/burger-4.png",
-                "Name":"Blg chicken burger",
+                "Name":"Big chicken burger",
                 "Price": 15.99,
                 "Details": "Chicken, cheese, tomatoes, lettuce, onions, bell peppers"
             },
