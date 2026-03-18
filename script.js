@@ -11,9 +11,10 @@ function renderDishes(){
             let dishIMG = myDishes[i].Dish[index].Image;
             let dishName = myDishes[i].Dish[index].Name;
             let dishPrice = myDishes[i].Dish[index].Price;
+            let fixedPrice = dishPrice.toFixed(2);
             let dishDescription = myDishes[i].Dish[index].Details;
 
-            dishTemplate(category, dishIMG, dishName, dishPrice, dishDescription, index);
+            dishTemplate(category, dishIMG, dishName, fixedPrice, dishDescription, index);
         }
     }
 }

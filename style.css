@@ -189,7 +189,7 @@ h1{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: end;
 }
 
@@ -230,6 +230,7 @@ span{
     background-color: white;
     border: none;
     border-radius: 16px;
+    margin-bottom: 24px;
 }
 
 .button-add-dish:hover{
