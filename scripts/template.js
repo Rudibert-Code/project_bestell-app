@@ -13,7 +13,7 @@ function dishTemplate(category, dishIMG, dishName, dishPrice, dishDescription, i
                 </div>
                 <div class="dish-info-3">
                     <p class="font-dish-price" id="dish-price-">${dishPrice} €</p>
-                    <button id="add-dish-${category}${index}" onclick="addDish()">...</button>
+                    <button class="button-add-dish" id="add-dish-${category}${index}" onclick="addDish()">Add to basket</button>
                 </div>
             </section>
         </article>

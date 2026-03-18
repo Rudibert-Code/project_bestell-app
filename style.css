@@ -222,6 +222,21 @@ span{
     gap: 32px;
 }
 
+.button-add-dish{
+    cursor: pointer;
+    font-size: 16px;
+    color: #363534;
+    padding: 8px 16px;
+    background-color: white;
+    border: none;
+    border-radius: 16px;
+}
+
+.button-add-dish:hover{
+    color: #ffffff;
+    background-color: #E76C1F;
+}
+
 .sticky-wide-screen{
     width: 435px;
     height: 794px;
