@@ -1,3 +1,5 @@
+let myOrders = []
+
 let myDishes = [
     {
         "Category":"burger",
