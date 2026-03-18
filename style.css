@@ -248,6 +248,21 @@ span{
     position: sticky;
     left: calc(100% - 435px);
     top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    h2{
+        font-size: 24px;
+        font-weight: bold;
+        color: #FDEADC;
+    }
+}
+
+.separator{
+    width: 100%;
+    height: 3px;
+    background-color: #FDEADC;
 }
 
 .image-size{
@@ -260,4 +275,32 @@ span{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+table{
+    width: 100%;
+    color: #FDEADC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+}
+
+tr{
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-buy{
+    width: 124px;
+    height: 64px;
+    font-size: 16px;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 16px;
+    background-color: #E76C1F;
+    margin-bottom: 16px;
 }
