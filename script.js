@@ -27,7 +27,8 @@ function addToCart(listI, listDishIndex, dishPrice){
         orderAmount.push(1);
     } else{
         let currentPrice = orderPrice[dishIndex];
-        let fixedPrice = Number(currentPrice + dishPrice); 
+        let addedPrice = currentPrice + dishPrice;
+        let fixedPrice = Number(addedPrice.toFixed(2));
         orderPrice.splice(dishIndex, 1, fixedPrice);
         orderAmount[dishIndex]++
     }
@@ -35,13 +36,27 @@ function addToCart(listI, listDishIndex, dishPrice){
 }
 
 function rednerCart(){
-   if (orderAmount.length > 0) {
-       for (let i = 0; i < orderAmount.length; i++) {
-           let dishName = orderName[i];
-           let dishPrice = orderPrice[i];
-           let dishAmount = orderAmount[i];
-           cartTemplate(dishName, dishPrice, dishAmount);
-       }   
-   }
+    document.getElementById('shopping-cart').innerHTML = "";
+    if (orderAmount.length > 0) {
+        for (let i = 0; i < orderAmount.length; i++) {
+            let dishName = orderName[i];
+            let dishPrice = orderPrice[i];
+            let dishAmount = orderAmount[i];
+            cartTemplate(dishName, dishPrice, dishAmount);
+        }   
+    }
+    calculateFinalPrice();
+}
+
+function calculateFinalPrice(){
+    let subTotal = 0;
+    let finalPrice;
+    for (let i = 0; i < orderAmount.length; i++) {
+        let dishPrice = Number(orderPrice[i]);
+        let addedPrice = subTotal + dishPrice; 
+        subTotal = addedPrice;
+        finalPrice = addedPrice.toFixed(2);
+    }
+    document.getElementById('cart-subtotal').innerHTML = finalPrice;
 }
 

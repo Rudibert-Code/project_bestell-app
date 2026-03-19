@@ -1,6 +1,6 @@
-let orderName = ["Veggi mushroom black burger"];
-let orderPrice = [16.90];
-let orderAmount = [1];
+let orderName = [];
+let orderPrice = [];
+let orderAmount = [];
 
 let myDishes = [
     {

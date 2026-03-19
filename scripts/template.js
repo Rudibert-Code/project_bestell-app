@@ -20,7 +20,6 @@ function dishTemplate(category, dishIMG, dishName, dishPrice, dishDescription, i
 }
 
 function cartTemplate(dishName, dishPrice, dishAmount){
-    document.getElementById('shopping-cart').innerHTML = ""; 
     document.getElementById('shopping-cart').innerHTML += `
         <section class="cart-box" id="cart-">
                 <h3 class="cart-infos" id="cart-dish-name">${dishAmount}x ${dishName}}</h3>
