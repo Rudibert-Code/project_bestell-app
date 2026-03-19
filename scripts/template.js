@@ -13,20 +13,20 @@ function dishTemplate(category, dishIMG, dishName, dishPrice, dishDescription, i
                 </div>
                 <div class="dish-info-3">
                     <p class="font-dish-price" id="dish-price-">${dishPrice} €</p>
-                    <button class="button-add-dish" id="add-dish-${category}${index}" onclick="addDish(${dishName},${dishPrice})">Add to basket</button>
+                    <button class="button-add-dish" id="add-dish-${category}${index}" onclick="addToCart(${dishName},${dishPrice})">Add to basket</button>
                 </div>
             </section>
         </article>
     `;
 }
 
-function cartTemplate(dishName, dishPrice){
+function cartTemplate(dishName, dishPrice, dishAmount){
     document.getElementById('shopping-cart').innerHTML += `
         <section class="cart-box" id="cart-">
-                <h3 class="cart-infos" id="cart-dish-name">1x Dishe Name</h3>
+                <h3 class="cart-infos" id="cart-dish-name">${dishAmount}x ${dishName}}</h3>
             <div class="cart-box-positions">
                 <a href="#" onclick="removeOrder()"><img src="" alt=""></a>
-                <p id="card-dish-price">10.50</p>
+                <p id="card-dish-price">${dishPrice}€</p>
             </div>
         </section>
     `; 

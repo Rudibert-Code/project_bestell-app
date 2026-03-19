@@ -20,19 +20,7 @@ function renderDishes(){
     }
 }
 
- function rednerCart(){
-    if (orderAmount.length > 0) {
-        for (let i = 0; i < orderAmount.length; i++) {
-            let dishName = orderName[i];
-            let dishPrice = orderPrice[i];
-            let dishAmount = orderAmount[i];
-
-            cartTemplate(dishName, dishPrice, dishAmount);
-        }   
-    }
- }
-
-function addDish(dishName, dishPrice){
+function addToCart(dishName, dishPrice){
     let dishIndex = getMenuIndex(dishName);
     if (dishIndex == -1) {
         orderName.push(dishName);
@@ -44,11 +32,24 @@ function addDish(dishName, dishPrice){
         orderPrice.slice(dishIndex, 1, fixedPrice);
         orderAmount++
     }
+    rednerCart();
 }
 
-orderName.findIndex(getMenuIndex);
+//orderName.findIndex(getMenuIndex);
 
 function getMenuIndex(dishName){
     let dishIndex = orderName.indexOf(dishName);
     return dishIndex;
 }
+
+function rednerCart(){
+   if (orderAmount.length > 0) {
+       for (let i = 0; i < orderAmount.length; i++) {
+           let dishName = orderName[i];
+           let dishPrice = orderPrice[i];
+           let dishAmount = orderAmount[i];
+           cartTemplate(dishName, dishPrice, dishAmount);
+       }   
+   }
+}
+
