@@ -1,4 +1,6 @@
-let myOrders = []
+let orderName = {}
+let orderPrice = {}
+let orderAmount = {}
 
 let myDishes = [
     {

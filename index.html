@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell App</title>
-    <link rel="icon" type="image" href="./assets/logo/Chanese 1.png">
+    <link rel="icon" type="image" href="./assets/logo/Icon-Chanese.png">
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
     <script src="./scripts/dishes-list.js"></script>
@@ -61,7 +61,15 @@
             </section>
             <section open class="sticky-wide-screen" id="sticky-wide-screen">
                 <h2>Your Orders</h2>
-                <section class="shopping-cart-container" id="shopping-cart"></section>
+                <section class="shopping-cart-container" id="shopping-cart">
+                    <section class="cart-box" id="cart-">
+                            <h3 class="cart-infos" id="cart-dish-name">1x Dishe Name</h3>
+                        <div class="cart-box-positions">
+                            <a href="#" onclick="removeOrder()"><img src="" alt=""></a>
+                            <p id="card-dish-price">10.50</p>
+                        </div>
+                    </section>
+                </section>
                 <section>
                     <table>
                         <tr>

@@ -284,8 +284,7 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    overflow: hidden;
-    overflow-y: scroll;
+
 }
 
 table{
@@ -314,4 +313,27 @@ tr{
     border-radius: 16px;
     background-color: #E76C1F;
     margin-bottom: 16px;
+}
+
+.shopping-cart-container{
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-box{
+    width: 80%;
+    border-radius: 16px;
+    background-color: #FDEADC;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-box-positions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

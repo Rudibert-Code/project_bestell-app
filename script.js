@@ -1,5 +1,6 @@
 function init(){
     renderDishes();
+    rednerCart();
 }
 
 function renderDishes(){
@@ -17,4 +18,37 @@ function renderDishes(){
             dishTemplate(category, dishIMG, dishName, fixedPrice, dishDescription, index);
         }
     }
+}
+
+ function rednerCart(){
+    if (orderAmount.length > 0) {
+        for (let i = 0; i < orderAmount.length; i++) {
+            let dishName = orderName[i];
+            let dishPrice = orderPrice[i];
+            let dishAmount = orderAmount[i];
+
+            cartTemplate(dishName, dishPrice, dishAmount);
+        }   
+    }
+ }
+
+function addDish(dishName, dishPrice){
+    let dishIndex = getMenuIndex(dishName);
+    if (dishIndex == -1) {
+        orderName.push(dishName);
+        orderPrice.push(dishPrice);
+        orderAmount.push(1);
+    } else{
+        let currentPrice = orderPrice[dishIndex];
+        let fixedPrice = Number(currentPrice + dishPrice); 
+        orderPrice.slice(dishIndex, 1, fixedPrice);
+        orderAmount++
+    }
+}
+
+orderName.findIndex(getMenuIndex);
+
+function getMenuIndex(dishName){
+    let dishIndex = orderName.indexOf(dishName);
+    return dishIndex;
 }
