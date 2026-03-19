@@ -9,7 +9,7 @@ let myDishes = [
             {
                 "Image": "./assets/img/burger-1.png",
                 "Name":"Veggi mushroom black burger",
-                "Price": 16.90,
+                "Price": 10.00,
                 "Details": "Mixed green salad, tomatoes, edamame, mushrooms"
             },  
             {

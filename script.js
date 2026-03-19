@@ -42,7 +42,7 @@ function rednerCart(){
             let dishName = orderName[i];
             let dishPrice = orderPrice[i];
             let dishAmount = orderAmount[i];
-            cartTemplate(dishName, dishPrice, dishAmount);
+            cartTemplate(dishName, dishPrice, dishAmount, i);
         }   
     }
     calculateFinalPrice();
@@ -60,3 +60,24 @@ function calculateFinalPrice(){
     document.getElementById('cart-subtotal').innerHTML = finalPrice;
 }
 
+function removeOrder(n){
+    let preAmount = orderAmount[n];
+    orderAmount[n]-- 
+    let newAmount = orderAmount[n];
+    let currentPrice = orderPrice[n];
+    let calcPrice = currentPrice / preAmount;
+    let result = calcPrice * newAmount;
+    orderPrice.splice(n, 1, result);
+    rednerCart();
+}
+
+function addOrder(n){
+    let preAmount = orderAmount[n];
+    orderAmount[n]++ 
+    let newAmount = orderAmount[n];
+    let currentPrice = orderPrice[n];
+    let calcPrice = currentPrice / preAmount;
+    let result = calcPrice * newAmount;
+    orderPrice.splice(n, 1, result);
+    rednerCart();
+}
