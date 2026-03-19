@@ -24,7 +24,7 @@ function cartTemplate(dishName, dishPrice, dishAmount, dishIndex){
         <section class="cart-box" id="order-${dishIndex}">
             <div class="cart-box-positions">
                 <h3 class="cart-infos" id="cart-dish-name">${dishAmount}x ${dishName}</h3>
-                <a href="#"><img src="./assets/icon/delete.png" alt=""></a>
+                <a href="#" onclick="deleteOrder(${dishIndex})"><img src="./assets/icon/delete.png" alt=""></a>
             </div>
             <div class="cart-box-positions">
                 <div class="cart-box-order">

@@ -55,9 +55,10 @@ function calculateFinalPrice(){
         let dishPrice = Number(orderPrice[i]);
         let addedPrice = subTotal + dishPrice; 
         subTotal = addedPrice;
-        finalPrice = addedPrice.toFixed(2);
+        finalPrice = Number(addedPrice.toFixed(2));
     }
     document.getElementById('cart-subtotal').innerHTML = finalPrice;
+    document.getElementById('cart-total').innerHTML = finalPrice + 5;
 }
 
 function removeOrder(n){
@@ -79,5 +80,12 @@ function addOrder(n){
     let calcPrice = currentPrice / preAmount;
     let result = calcPrice * newAmount;
     orderPrice.splice(n, 1, result);
+    rednerCart();
+}
+
+function deleteOrder(n){
+    orderName.splice(n, 1);
+    orderPrice.splice(n, 1);
+    orderAmount.splice(n, 1);
     rednerCart();
 }
