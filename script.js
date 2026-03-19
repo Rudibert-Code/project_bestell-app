@@ -10,17 +10,18 @@ function renderDishes(){
         
         for (let index = 0; index < categoryLength; index++) {
             let dishIMG = myDishes[i].Dish[index].Image;
-            let dishName = myDishes[i].Dish[index].Name;
-            let dishPrice = myDishes[i].Dish[index].Price;
+            let dishName = String(myDishes[i].Dish[index].Name);
+            let dishPrice = Number(myDishes[i].Dish[index].Price);
             let fixedPrice = dishPrice.toFixed(2);
             let dishDescription = myDishes[i].Dish[index].Details;
 
-            dishTemplate(category, dishIMG, dishName, fixedPrice, dishDescription, index);
+            dishTemplate(category, dishIMG, dishName, fixedPrice, dishDescription, index, i);
         }
     }
 }
 
-function addToCart(dishName, dishPrice){
+function addToCart(listI, listDishIndex, dishPrice){
+    let dishName = myDishes[listI].Dish[listDishIndex].Name;
     let dishIndex = getMenuIndex(dishName);
     if (dishIndex == -1) {
         orderName.push(dishName);
@@ -35,10 +36,8 @@ function addToCart(dishName, dishPrice){
     rednerCart();
 }
 
-//orderName.findIndex(getMenuIndex);
-
 function getMenuIndex(dishName){
-    let dishIndex = orderName.indexOf(dishName);
+    let dishIndex = orderName.findIndex(dishName);
     return dishIndex;
 }
 

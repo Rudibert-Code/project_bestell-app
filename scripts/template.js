@@ -1,4 +1,4 @@
-function dishTemplate(category, dishIMG, dishName, dishPrice, dishDescription, index){
+function dishTemplate(category, dishIMG, dishName, dishPrice, dishDescription, index, i){
     let locationID = category + "-section";
 
     document.getElementById(locationID).innerHTML += `
@@ -13,7 +13,7 @@ function dishTemplate(category, dishIMG, dishName, dishPrice, dishDescription, i
                 </div>
                 <div class="dish-info-3">
                     <p class="font-dish-price" id="dish-price-">${dishPrice} €</p>
-                    <button class="button-add-dish" id="add-dish-${category}${index}" onclick="addToCart(${dishName},${dishPrice})">Add to basket</button>
+                    <button class="button-add-dish" id="add-dish-${category}${index}" onclick="addToCart(${i},${index},${dishPrice})">Add to basket</button>
                 </div>
             </section>
         </article>
