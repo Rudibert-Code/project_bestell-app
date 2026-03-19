@@ -1,3 +1,5 @@
+let toggled = false;
+
 function init(){
     renderDishes();
     rednerCart();
@@ -37,15 +39,28 @@ function addToCart(listI, listDishIndex, dishPrice){
 
 function rednerCart(){
     document.getElementById('shopping-cart').innerHTML = "";
+    if (toggled == true) {
+        toggled = false;
+        toggleCart();        
+    }
     if (orderAmount.length > 0) {
         for (let i = 0; i < orderAmount.length; i++) {
             let dishName = orderName[i];
             let dishPrice = orderPrice[i];
             let dishAmount = orderAmount[i];
             cartTemplate(dishName, dishPrice, dishAmount, i);
-        }   
+        }
+    } else{
+        toggled = true;
+        toggleCart();
     }
     calculateFinalPrice();
+}
+
+function toggleCart(){
+    document.getElementById('cart-no-orders').classList.toggle("cart-hide");
+    document.getElementById('cart-price-calculator').classList.toggle("cart-hide");
+    document.getElementById('cart-button').classList.toggle("cart-hide");
 }
 
 function calculateFinalPrice(){

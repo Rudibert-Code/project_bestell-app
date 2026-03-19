@@ -61,9 +61,13 @@
             </section>
             <section open class="sticky-wide-screen" id="sticky-wide-screen">
                 <h2>Your Orders</h2>
+                <section class="cart-no-orders cart-hide" id="cart-no-orders">
+                    <p class="cart-subtitle">Nothing here yet.<br>Go ahead and choose something<br>delicious!</p>
+                    <img src="./assets/icon/shopping_cart.png" alt="">
+                </section>
                 <section class="shopping-cart-container" id="shopping-cart">
                 </section>
-                <section>
+                <section id="cart-price-calculator">
                     <table>
                         <tr>
                             <th>Subtotal: </th>
@@ -82,7 +86,7 @@
                         </tr>
                     </table>
                 </section>
-                <button class="button-buy">Buy now</button>
+                <button class="button-buy" id="cart-button">Buy now</button>
             </section>
         </section>
     </main>
