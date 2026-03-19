@@ -22,9 +22,16 @@ function dishTemplate(category, dishIMG, dishName, dishPrice, dishDescription, i
 function cartTemplate(dishName, dishPrice, dishAmount){
     document.getElementById('shopping-cart').innerHTML += `
         <section class="cart-box" id="cart-">
-                <h3 class="cart-infos" id="cart-dish-name">${dishAmount}x ${dishName}}</h3>
             <div class="cart-box-positions">
-                <a href="#" onclick="removeOrder()"><img src="" alt=""></a>
+                <h3 class="cart-infos" id="cart-dish-name">${dishAmount}x ${dishName}</h3>
+                <a href="#"><img src="./assets/icon/delete.png" alt=""></a>
+            </div>
+            <div class="cart-box-positions">
+                <div class="cart-box-order">
+                    <a href="#" onclick="removeOrder()">-  </a>
+                    <p>${dishAmount}</p>
+                    <a href="#" onclick="addOrder()">  +</a>
+                </div>
                 <p id="card-dish-price">${dishPrice}€</p>
             </div>
         </section>
