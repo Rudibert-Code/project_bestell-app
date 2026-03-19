@@ -6,15 +6,13 @@ function init(){
 function renderDishes(){
     for (let i = 0; i < myDishes.length; i++) {
         let category = myDishes[i].Category;
-        let categoryLength = myDishes[i].Dish.length;
-        
+        let categoryLength = myDishes[i].Dish.length;        
         for (let index = 0; index < categoryLength; index++) {
             let dishIMG = myDishes[i].Dish[index].Image;
             let dishName = String(myDishes[i].Dish[index].Name);
             let dishPrice = Number(myDishes[i].Dish[index].Price);
             let fixedPrice = dishPrice.toFixed(2);
             let dishDescription = myDishes[i].Dish[index].Details;
-
             dishTemplate(category, dishIMG, dishName, fixedPrice, dishDescription, index, i);
         }
     }
@@ -22,7 +20,7 @@ function renderDishes(){
 
 function addToCart(listI, listDishIndex, dishPrice){
     let dishName = myDishes[listI].Dish[listDishIndex].Name;
-    let dishIndex = getMenuIndex(dishName);
+    let dishIndex = orderName.indexOf(dishName);
     if (dishIndex == -1) {
         orderName.push(dishName);
         orderPrice.push(dishPrice);
@@ -30,15 +28,10 @@ function addToCart(listI, listDishIndex, dishPrice){
     } else{
         let currentPrice = orderPrice[dishIndex];
         let fixedPrice = Number(currentPrice + dishPrice); 
-        orderPrice.slice(dishIndex, 1, fixedPrice);
-        orderAmount++
+        orderPrice.splice(dishIndex, 1, fixedPrice);
+        orderAmount[dishIndex]++
     }
     rednerCart();
-}
-
-function getMenuIndex(dishName){
-    let dishIndex = orderName.findIndex(dishName);
-    return dishIndex;
 }
 
 function rednerCart(){
