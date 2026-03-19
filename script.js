@@ -79,6 +79,10 @@ function calculateFinalPrice(){
 function removeOrder(n){
     let preAmount = orderAmount[n];
     orderAmount[n]-- 
+    if (orderAmount[n] == 0) {
+        deleteOrder(n);
+        return;
+    }
     let newAmount = orderAmount[n];
     let currentPrice = orderPrice[n];
     let calcPrice = currentPrice / preAmount;
