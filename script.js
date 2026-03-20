@@ -10,12 +10,10 @@ function renderDishes(){
         let category = myDishes[i].Category;
         let categoryLength = myDishes[i].Dish.length;        
         for (let index = 0; index < categoryLength; index++) {
-            let dishIMG = myDishes[i].Dish[index].Image;
-            let dishName = String(myDishes[i].Dish[index].Name);
-            let dishPrice = Number(myDishes[i].Dish[index].Price);
+            let dish = myDishes[i].Dish[index];
+            let dishPrice = Number(dish.Price);
             let fixedPrice = dishPrice.toFixed(2);
-            let dishDescription = myDishes[i].Dish[index].Details;
-            dishTemplate(category, dishIMG, dishName, fixedPrice, dishDescription, index, i);
+            dishTemplate(category, dish.Image, String(dish.Name), fixedPrice, dish.Details, index, i);
         }
     }
 }

@@ -379,3 +379,7 @@ tr{
 .cart-hide{
     display: none;
 }
+
+.clickable{
+    cursor: pointer;
+}
