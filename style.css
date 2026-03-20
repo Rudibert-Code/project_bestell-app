@@ -420,3 +420,31 @@ tr{
     align-items: center;
     gap: 8px;
 }
+
+.dialog-container{
+    width: 400px;
+    height: 256px;
+    background-color: #363534;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3{
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+    }
+    p{
+        font-size: 16px;
+        font-weight: bold;
+        color: white; 
+    }
+}
+
+.dialog-head{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
