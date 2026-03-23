@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Palanquin-Dark";
+    src: url(../assets/fonts/PalanquinDark-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Palanquin";
+    src: url(../assets/fonts/Palanquin-Regular.ttf);
+}
+
+.font-title{
+    font-family: "Palanquin-Dark";
+}
+
+.font-text{
+    font-family: "Palanquin";
+}

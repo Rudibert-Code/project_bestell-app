@@ -80,17 +80,18 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 48px;
     font-weight: bold;
     margin-bottom: 16px;
 }
 
 .color-a{
+    font-size: 80px;
     color: #E76C1F;
     margin: 0;
 }
 
 .color-b{
+    font-size: 80px;
     color: black;
     margin: 0;
 }
