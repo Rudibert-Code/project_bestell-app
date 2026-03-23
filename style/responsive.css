@@ -1,3 +1,11 @@
-@media(max-width: 1260px){
+@media(min-width: 1320px){
+    .sticky-mobile{
+        display: none;
+    }
+}
 
+@media(max-width: 1320px){
+    .sticky-wide-screen{
+        display: none;
+    }
 }
