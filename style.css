@@ -217,7 +217,7 @@ span{
 }
 
 .sticky-wide-screen{
-    width: 435px;
+    width: 436px;
     height: 794px;
     background-color: #363534;
     border-top-left-radius: 30px;
@@ -415,4 +415,28 @@ dialog::backdrop{
     position: relative;
     left: 24px;
     top: 4px;
+}
+
+.sticky-container{
+    width: 500px;
+    height: 2502px;
+}
+
+.visible{
+}
+
+.shopping-cart-mobile{
+    width: 436px;
+    height: 794px;
+    background-color: #363534;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    h2{
+        font-weight: bold;
+        color: #FDEADC;
+    }
 }

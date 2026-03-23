@@ -72,7 +72,7 @@ function calculateFinalPrice(){
     }
     document.getElementById('cart-subtotal').innerHTML = finalPrice;
     document.getElementById('cart-total').innerHTML = finalPrice + 5;
-    document.getElementById('oder-amount').innerHTML = orderAmount.length;
+    orderNumberIcon();
 }
 
 function removeOrder(n){
@@ -118,4 +118,17 @@ function buy(){
 
 function closeDialog(){
     document.getElementById("dialog").close();
+}
+
+function orderNumberIcon(){
+    let orderAmountTotal = 0;
+    for (let i = 0; i < orderAmount.length; i++) {
+        let sum = orderAmountTotal;
+        orderAmountTotal = sum + Number(orderAmount[i]);        
+    }
+    document.getElementById('oder-amount').innerHTML = orderAmountTotal;
+}
+
+function openCartS(){
+    document.getElementById("scMobile").showModal();
 }

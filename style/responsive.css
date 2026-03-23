@@ -5,8 +5,23 @@
 }
 
 @media(max-width: 1379px){
-    .sticky-container{
+    .visible{
         display: none;
+    }
+
+    .sticky-container{
+        width: calc(50% + 218px);
+        height: 2502px;
+    }
+
+    .sticky-wide-screen{
+        width: 436px;
+        height: 794px;
+        background-color: #363534;
+        border-radius: 30px;
+        position: sticky;
+        top: 92px;
+        left: 0;
     }
     .dish-container{
         width: 100%;
@@ -33,6 +48,10 @@
 }
 
 @media(max-width: 910px){
+    .sticky-container{
+        height: 4500px;
+    }
+
     .dishes-base{
         height: auto;
         display: flex;

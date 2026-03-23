@@ -27,6 +27,37 @@
         <img class="hero-logo" src="./assets/logo/logo.png" alt="icon depicts an AI rendering of a burger">  
     </header>
     <main>
+        <dialog id="scMobile">
+            <section  class="shopping-cart-mobile">
+                <h2>Your Orders</h2>
+            <section class="cart-no-orders cart-hide" id="cart-no-orders-mobile">
+                <p class="cart-subtitle">Nothing here yet.<br>Go ahead and choose something<br>delicious!</p>
+                <img src="./assets/icon/shopping_cart.png" alt="">
+                </section>
+                <section class="shopping-cart-container" id="shopping-cart-mobile">
+                </section>
+                <section id="cart-price-calculator-mobile">
+                    <table>
+                        <tr>
+                            <th>Subtotal: </th>
+                            <td id="cart-subtotal-mobile">00,00</td>
+                        </tr>
+                        <tr>
+                            <th>Deilvery Fee: </th>
+                            <td>5,00</td>
+                        </tr>
+                    </table>
+                    <div class="separator"></div>
+                    <table>
+                        <tr>
+                            <th>Total: </th>
+                            <td id="cart-total-mobile">5,00</td>
+                        </tr>
+                    </table>
+                </section>
+                <button class="button-buy" id="cart-button-mobile" onclick="buy()">Buy now</button>
+            </section>
+        </dialog>
         <dialog id="dialog">
             <section class="dialog-container">
                 <section class="dialog-head">
@@ -72,8 +103,8 @@
             </section>
             </section>
         </section>
-        <section class="sticky-container">
-            <div class="sticky-wide-screen" id="sticky-wide-screen">
+        <section class="sticky-container" id="activate-sticky-mobile">
+            <div class="sticky-wide-screen visible" id="sticky-wide-screen">
                 <h2>Your Orders</h2>
                 <section class="cart-no-orders cart-hide" id="cart-no-orders">
                 <p class="cart-subtitle">Nothing here yet.<br>Go ahead and choose something<br>delicious!</p>
@@ -118,9 +149,9 @@
         <img class="clickable icon-mobile" src="./assets/icon/icon_home.png" alt="icon home">
         <img class="clickable icon-mobile" src="./assets/icon/icon_person.png" alt="icon profil">
         <img class="clickable icon-mobile" src="./assets/icon/icon_takeout.png" alt="icon takeout">
-        <div class="clickable special-icon">
+        <div class="clickable special-icon" onclick="openCartS()">
             <p class="special-icon-counter" id="oder-amount">0</p>  
-            <img class="icon-mobile" src="./assets/icon/icon_shopping-cart.png" alt="icon shopping cart" onclick="openCartS()">
+            <img class="icon-mobile" src="./assets/icon/icon_shopping-cart.png" alt="icon shopping cart">
         </div>
     </section>
 </body>
