@@ -427,6 +427,11 @@ dialog{
     border-radius: 16px;
 }
 
+dialog::backdrop{
+    background-color: black;
+    opacity: 0.66;
+}
+
 .dialog-container{
     width: 400px;
     height: 256px;
@@ -448,8 +453,7 @@ dialog{
 }
 
 .dialog-head{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: end;
-    align-items: center;
 }
