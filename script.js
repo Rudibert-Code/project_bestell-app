@@ -109,9 +109,9 @@ function deleteOrder(n){
 
 function buy(){
     document.getElementById("dialog").showModal();
-    orderName.splice(0, orderName.length);
-    orderPrice.splice(0, orderPrice.length);
-    orderAmount.splice(0, orderAmount.length);
+    orderName = [];
+    orderPrice = [];
+    orderAmount = [];
     rednerCart();
 }
 
