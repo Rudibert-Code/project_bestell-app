@@ -67,17 +67,15 @@ function toggleCart(){
 
 function calculateFinalPrice(){
     let subTotal = 0;
-    let finalPrice;
     for (let i = 0; i < orderAmount.length; i++) {
-        let dishPrice = Number(orderPrice[i]);
+        let dishPrice = +orderPrice[i];
         let addedPrice = subTotal + dishPrice; 
-        subTotal = addedPrice;
-        finalPrice = Number(addedPrice.toFixed(2));
+        subTotal = +addedPrice.toFixed(2);
     }
-    document.getElementById('cart-subtotal').innerHTML = finalPrice;
-    document.getElementById('cart-total').innerHTML = finalPrice + 5;
-    document.getElementById('cart-subtotal-mobile').innerHTML = finalPrice;
-    document.getElementById('cart-total-mobile').innerHTML = finalPrice + 5;
+    document.getElementById('cart-subtotal').innerHTML = +subTotal;
+    document.getElementById('cart-total').innerHTML = +subTotal + 5.00;
+    document.getElementById('cart-subtotal-mobile').innerHTML = +subTotal;
+    document.getElementById('cart-total-mobile').innerHTML = +subTotal + 5.00;
     orderNumberIcon();
 }
 
