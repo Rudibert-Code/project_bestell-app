@@ -115,10 +115,13 @@
         </section>
     </footer>
     <section class="sticky-mobile" id="sticky-mobile">
-        <img src="./assets/icon/icon_home.png" alt="icon home">
-        <img src="./assets/icon/icon_person.png" alt="icon profil">
-        <img src="./assets/icon/icon_takeout.png" alt="icon takeout">
-        <img src="./assets/icon/icon_shopping-cart.png" alt="icon shopping cart">
+        <img class="clickable icon-mobile" src="./assets/icon/icon_home.png" alt="icon home">
+        <img class="clickable icon-mobile" src="./assets/icon/icon_person.png" alt="icon profil">
+        <img class="clickable icon-mobile" src="./assets/icon/icon_takeout.png" alt="icon takeout">
+        <div class="clickable special-icon">
+            <p class="special-icon-counter" id="oder-amount">0</p>  
+            <img class="icon-mobile" src="./assets/icon/icon_shopping-cart.png" alt="icon shopping cart" onclick="openCartS()">
+        </div>
     </section>
 </body>
 </html>

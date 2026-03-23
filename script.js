@@ -72,6 +72,7 @@ function calculateFinalPrice(){
     }
     document.getElementById('cart-subtotal').innerHTML = finalPrice;
     document.getElementById('cart-total').innerHTML = finalPrice + 5;
+    document.getElementById('oder-amount').innerHTML = orderAmount.length;
 }
 
 function removeOrder(n){
