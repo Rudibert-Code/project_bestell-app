@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./style/basic.css">
     <link rel="stylesheet" href="./style/responsive.css">
+    <link rel="stylesheet" href="./style/shopping-cart-mobile.css">
     <script src="./script.js"></script>
     <script src="./scripts/db.js"></script>
     <script src="./scripts/template.js"></script>
@@ -29,7 +30,10 @@
     <main>
         <dialog id="scMobile">
             <section class="shopping-cart-mobile">
-                <h2>Your Orders</h2>
+                <section class="shopping-cart-container-head">
+                    <h2>Your Orders</h2>
+                    <a class="clickable" onclick="closeCartMobile()">X</a>
+                </section>
                 <section class="shopping-cart-container" id="shopping-cart-mobile">
                 </section>
                 <section id="cart-price-calculator-mobile">

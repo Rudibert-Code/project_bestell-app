@@ -53,6 +53,7 @@ function rednerCart(){
     } else{
         toggled = true;
         toggleCart();
+        document.getElementById('scMobile').close();
     }
     calculateFinalPrice();
     cartIcon();
@@ -137,9 +138,9 @@ function orderNumberIcon(){
 
 function cartIcon(){
     if (orderAmount.length > 0) {
-        document.getElementsByClassName('icon-order-mobile').src("./assets/icon/icon_shopping-cart_active.png");
+        document.getElementById('icon-order-mobile').src = "./assets/icon/icon_shopping-cart_active.png";
     } else{
-        document.getElementsByClassName('icon-order-mobile').src("./assets/icon/icon_shopping-cart.png");
+        return;
     }
 }
 
@@ -147,4 +148,8 @@ function openCartS(){
     if (orderAmount.length > 0) {
         document.getElementById("scMobile").showModal();
     }
+}
+
+function closeCartMobile(){
+    document.getElementById("scMobile").close(); 
 }
