@@ -74,3 +74,20 @@ p{
 a{
     font-size: 16px;
 }
+
+table{
+    width: 100%;
+    color: #FDEADC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+}
+
+tr{
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
