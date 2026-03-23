@@ -23,8 +23,8 @@ function cartTemplate(dishName, dishPrice, dishAmount, dishIndex){
     document.getElementById('shopping-cart').innerHTML += `
         <section class="cart-box" id="order-${dishIndex}">
             <div class="cart-box-positions">
-                <h3 class="cart-infos" id="cart-dish-name">${dishAmount}x ${dishName}</h3>
-                <img class="clickable" src="./assets/icon/delete.png" onclick="deleteOrder(${dishIndex})" alt="">
+                <h3 class="cart-infos">${dishAmount}x ${dishName}</h3>
+                <img class="clickable" src="./assets/icon/delete.png" onclick="deleteOrder(${dishIndex})">
             </div>
             <div class="cart-box-positions">
                 <div class="cart-box-order">
@@ -32,7 +32,26 @@ function cartTemplate(dishName, dishPrice, dishAmount, dishIndex){
                     <p>${dishAmount}</p>
                     <a class="clickable" onclick="addOrder(${dishIndex})">  +</a>
                 </div>
-                <p class="font-text" id="card-dish-price">${dishPrice}€</p>
+                <p class="font-text">${dishPrice}€</p>
+            </div>
+        </section>
+    `; 
+}
+
+function cartMobileTemplate(dishName, dishPrice, dishAmount, dishIndex){
+    document.getElementById('shopping-cart-mobile').innerHTML += `
+        <section class="cart-box" id="order-${dishIndex}-mobile">
+            <div class="cart-box-positions">
+                <h3 class="cart-infos">${dishAmount}x ${dishName}</h3>
+                <img class="clickable" src="./assets/icon/delete.png" onclick="deleteOrder(${dishIndex})">
+            </div>
+            <div class="cart-box-positions">
+                <div class="cart-box-order">
+                    <a class="clickable" onclick="removeOrder(${dishIndex})">-  </a>
+                    <p>${dishAmount}</p>
+                    <a class="clickable" onclick="addOrder(${dishIndex})">  +</a>
+                </div>
+                <p class="font-text">${dishPrice}€</p>
             </div>
         </section>
     `; 

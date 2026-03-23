@@ -422,15 +422,10 @@ dialog::backdrop{
     height: 2502px;
 }
 
-.visible{
-}
-
 .shopping-cart-mobile{
     width: 436px;
     height: 794px;
     background-color: #363534;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

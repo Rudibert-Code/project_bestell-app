@@ -5,13 +5,8 @@
 }
 
 @media(max-width: 1379px){
-    .visible{
-        display: none;
-    }
-
     .sticky-container{
-        width: calc(50% + 218px);
-        height: 2502px;
+        display: none;
     }
 
     .sticky-wide-screen{

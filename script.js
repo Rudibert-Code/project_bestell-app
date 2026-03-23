@@ -37,6 +37,7 @@ function addToCart(listI, listDishIndex, dishPrice){
 
 function rednerCart(){
     document.getElementById('shopping-cart').innerHTML = "";
+    document.getElementById('shopping-cart-mobile').innerHTML = "";
     if (toggled == true) {
         toggled = false;
         toggleCart();        
@@ -47,12 +48,14 @@ function rednerCart(){
             let dishPrice = orderPrice[i];
             let dishAmount = orderAmount[i];
             cartTemplate(dishName, dishPrice, dishAmount, i);
+            cartMobileTemplate(dishName, dishPrice, dishAmount, i);
         }
     } else{
         toggled = true;
         toggleCart();
     }
     calculateFinalPrice();
+    cartIcon();
 }
 
 function toggleCart(){
@@ -72,6 +75,8 @@ function calculateFinalPrice(){
     }
     document.getElementById('cart-subtotal').innerHTML = finalPrice;
     document.getElementById('cart-total').innerHTML = finalPrice + 5;
+    document.getElementById('cart-subtotal-mobile').innerHTML = finalPrice;
+    document.getElementById('cart-total-mobile').innerHTML = finalPrice + 5;
     orderNumberIcon();
 }
 
@@ -109,6 +114,7 @@ function deleteOrder(n){
 }
 
 function buy(){
+    document.getElementById('scMobile').close();
     document.getElementById("dialog").showModal();
     orderName = [];
     orderPrice = [];
@@ -129,6 +135,16 @@ function orderNumberIcon(){
     document.getElementById('oder-amount').innerHTML = orderAmountTotal;
 }
 
+function cartIcon(){
+    if (orderAmount.length > 0) {
+        document.getElementsByClassName('icon-order-mobile').src("./assets/icon/icon_shopping-cart_active.png");
+    } else{
+        document.getElementsByClassName('icon-order-mobile').src("./assets/icon/icon_shopping-cart.png");
+    }
+}
+
 function openCartS(){
-    document.getElementById("scMobile").showModal();
+    if (orderAmount.length > 0) {
+        document.getElementById("scMobile").showModal();
+    }
 }
