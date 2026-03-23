@@ -25,6 +25,16 @@
         <img class="hero-logo" src="./assets/logo/logo.png" alt="icon depicts an AI rendering of a burger">  
     </header>
     <main>
+        <dialog id="dialog">
+            <section class="dialog-container">
+                <section class="dialog-head">
+                    <img class="button clickable" src="./assets/icon/close.png" onclick="closeDialog()" alt="">
+                </section>
+                <img src="./assets/logo/delivered.png" alt="">
+                <h3>Order confirmed!</h3>
+                <p>Your food is on the way!</p>
+            </section>
+        </dialog>
         <section class="header-details">
             <section class="page-title">
                 <h1 class="title">
@@ -86,19 +96,9 @@
                         </tr>
                     </table>
                 </section>
-                <button class="button-buy" id="cart-button">Buy now</button>
+                <button class="button-buy" id="cart-button" onclick="buy()">Buy now</button>
             </section>
         </section>
-        <dialog open id="dialog">
-            <section class="dialog-container">
-                <section class="dialog-head">
-                    <img class="button clickable" src="./assets/icon/close.png" onclick="" alt="">
-                </section>
-                <img src="./assets/logo/delivered.png" alt="">
-                <h3>Order confirmed!</h3>
-                <p>Your food is on the way!</p>
-            </section>
-        </dialog>
     </main>
     <footer>
         <section class="footer-container">

@@ -106,3 +106,15 @@ function deleteOrder(n){
     orderAmount.splice(n, 1);
     rednerCart();
 }
+
+function buy(){
+    document.getElementById("dialog").showModal();
+    orderName.splice(0, orderName.length);
+    orderPrice.splice(0, orderPrice.length);
+    orderAmount.splice(0, orderAmount.length);
+    rednerCart();
+}
+
+function closeDialog(){
+    document.getElementById("dialog").close();
+}
