@@ -57,3 +57,7 @@
         color: white;
     }
 }
+
+.scroll-stopper{
+    overflow-y: hidden;
+}

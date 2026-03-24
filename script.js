@@ -117,10 +117,12 @@ function deleteOrder(n){
     orderPrice.splice(n, 1);
     orderAmount.splice(n, 1);
     rednerCart();
+    document.documentElement.classList.remove("scroll-stopper");
 }
 
 function buy(){
     document.getElementById('scMobile').close();
+    document.documentElement.classList.add("scroll-stopper");
     document.getElementById("dialog").showModal();
     orderName = [];
     orderPrice = [];
@@ -130,6 +132,7 @@ function buy(){
 
 function closeDialog(){
     document.getElementById("dialog").close();
+    document.documentElement.classList.remove("scroll-stopper");
 }
 
 function orderNumberIcon(){
@@ -145,16 +148,18 @@ function cartIcon(){
     if (orderAmount.length > 0) {
         document.getElementById('icon-order-mobile').src = "./assets/icon/icon_shopping-cart_active.png";
     } else{
-        return;
+        document.getElementById('icon-order-mobile').src = "./assets/icon/icon_shopping-cart.png";
     }
 }
 
 function openCartS(){
     if (orderAmount.length > 0) {
         document.getElementById("scMobile").showModal();
+        document.documentElement.classList.add("scroll-stopper");
     }
 }
 
 function closeCartMobile(){
     document.getElementById("scMobile").close(); 
+    document.documentElement.classList.remove("scroll-stopper");
 }
