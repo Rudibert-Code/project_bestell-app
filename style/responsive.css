@@ -42,7 +42,7 @@
     }
 }
 
-@media(max-width: 910px){
+@media(max-width: 972px){
     .sticky-container{
         height: 4500px;
     }

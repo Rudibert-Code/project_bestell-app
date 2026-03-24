@@ -36,16 +36,11 @@ function addToCart(listI, listDishIndex, dishPrice){
 }
 
 function rednerCart(){
-    document.getElementById('shopping-cart').innerHTML = "";
-    document.getElementById('shopping-cart-mobile').innerHTML = "";
-    if (toggled == true) {
-        toggled = false;
-        toggleCart();        
-    }
+    checkCartForContent()
     if (orderAmount.length > 0) {
         for (let i = 0; i < orderAmount.length; i++) {
             let dishName = orderName[i];
-            let dishPrice = orderPrice[i];
+            let dishPrice = orderPrice[i].toFixed(2);
             let dishAmount = orderAmount[i];
             cartTemplate(dishName, dishPrice, dishAmount, i);
             cartMobileTemplate(dishName, dishPrice, dishAmount, i);
@@ -59,6 +54,15 @@ function rednerCart(){
     cartIcon();
 }
 
+function checkCartForContent(){
+    document.getElementById('shopping-cart').innerHTML = "";
+    document.getElementById('shopping-cart-mobile').innerHTML = "";
+    if (toggled == true) {
+        toggled = false;
+        toggleCart();        
+    }
+}
+
 function toggleCart(){
     document.getElementById('cart-no-orders').classList.toggle("cart-hide");
     document.getElementById('cart-price-calculator').classList.toggle("cart-hide");
@@ -67,15 +71,18 @@ function toggleCart(){
 
 function calculateFinalPrice(){
     let subTotal = 0;
+    let fullPrice = 0;
     for (let i = 0; i < orderAmount.length; i++) {
         let dishPrice = +orderPrice[i];
-        let addedPrice = subTotal + dishPrice; 
-        subTotal = +addedPrice.toFixed(2);
+        let addedPrice = +subTotal + dishPrice;
+        let extraCost = addedPrice + 5;
+        fullPrice = extraCost.toFixed(2);
+        subTotal = addedPrice.toFixed(2);
     }
-    document.getElementById('cart-subtotal').innerHTML = +subTotal;
-    document.getElementById('cart-total').innerHTML = +subTotal + 5.00;
-    document.getElementById('cart-subtotal-mobile').innerHTML = +subTotal;
-    document.getElementById('cart-total-mobile').innerHTML = +subTotal + 5.00;
+    document.getElementById('cart-subtotal').innerHTML = subTotal;
+    document.getElementById('cart-total').innerHTML = fullPrice;
+    document.getElementById('cart-subtotal-mobile').innerHTML = subTotal;
+    document.getElementById('cart-total-mobile').innerHTML = fullPrice;
     orderNumberIcon();
 }
 
