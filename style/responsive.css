@@ -1,20 +1,26 @@
+@media(min-width: 2001px){
+    .main-container{
+        max-width: 1440px;
+    }
+    .sticky-container{
+        height: calc(100% - 128px);
+    }
+}
+
 @media(min-width: 1380px){
     .sticky-mobile{
         display: none;
     }
 }
 
-@media(max-width: 1440px){
+@media(max-width: 2000px){
     .main-container{
-        width: 100%;
         max-width: none;
-        display: flex;
-        align-items: start;
     }
 
     .sticky-container{
         width: 500px;
-        height: 2450px;
+        height: 2500px;
         position: absolute;
         right: 0;
         top: 1034px;

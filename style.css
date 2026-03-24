@@ -170,7 +170,6 @@
 
 .main-container{
     width: 100%;
-    max-width: 1440px;
     display: flex;
     align-items: start;
 }
@@ -208,7 +207,7 @@
     width: 500px;
     height: 2450px;
     position: absolute;
-    right: calc(50% - 752px);
+    right: calc(50% - 725px);
     top: 1034px;
 }
 
