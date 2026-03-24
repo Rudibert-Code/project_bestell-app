@@ -61,3 +61,14 @@
 .scroll-stopper{
     overflow-y: hidden;
 }
+
+dialog{
+    border: none;
+    padding: 0;
+    border-radius: 16px;
+}
+
+dialog::backdrop{
+    background-color: black;
+    opacity: 0.66;
+}
