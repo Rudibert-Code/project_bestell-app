@@ -49,7 +49,6 @@ function rednerCart(){
         toggled = true;
         toggleCart();
         document.getElementById('scMobile').close();
-        document.documentElement.classList.remove("scroll-stopper");
     }
     calculateFinalPrice();
     cartIcon();
