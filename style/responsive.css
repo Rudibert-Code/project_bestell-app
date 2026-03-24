@@ -1,7 +1,23 @@
-
 @media(min-width: 1380px){
     .sticky-mobile{
         display: none;
+    }
+}
+
+@media(max-width: 1440px){
+    .main-container{
+        width: 100%;
+        max-width: none;
+        display: flex;
+        align-items: start;
+    }
+
+    .sticky-container{
+        width: 500px;
+        height: 2450px;
+        position: absolute;
+        right: 0;
+        top: 1034px;
     }
 }
 

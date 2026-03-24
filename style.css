@@ -100,13 +100,13 @@
     justify-content: start;
     align-items: center;
     gap: 16px;
-    padding-left: 32px;
     margin-bottom: 32px;
     color: white;
 }
 
 .section-logo{
     height: 64px;
+    padding-left: 32px;
 }
 
 .dish-container{
@@ -170,6 +170,7 @@
 
 .main-container{
     width: 100%;
+    max-width: 1440px;
     display: flex;
     align-items: start;
 }
@@ -207,7 +208,7 @@
     width: 500px;
     height: 2450px;
     position: absolute;
-    right: 0;
+    right: calc(50% - 752px);
     top: 1034px;
 }
 
